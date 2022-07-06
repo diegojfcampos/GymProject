@@ -1,0 +1,12 @@
+create database gymproject;
+
+CREATE Table if not exists users(UserId INT auto_increment PRIMARY KEY, UserName VARCHAR(30), UserPassword VARCHAR(30));
+
+CREATE table if not exists members(MemberId INT auto_increment PRIMARY KEY, MemberFirstName VARCHAR(15), MemberLastName VARCHAR(15), MemberBirthday VARCHAR(10), MemberCellphoneNumber VARCHAR(25), MemberStartDate VARCHAR(10), MemberEmail VARCHAR(50)); 
+
+CREATE table if not exists staff(StaffId INT auto_increment PRIMARY KEY, StaffFirstName VARCHAR(15), StaffLastName VARCHAR(15), StaffBirthday VARCHAR(10), StaffCellphoneNumber VARCHAR(25), StaffStartDate VARCHAR(10), StaffEmail VARCHAR(50), StaffFunction VARCHAR(50), StaffSalary VARCHAR(15); 
+
+ALTER TABLE staff add column (StaffStreet VARCHAR(30), StaffHouseNumber VARCHAR(30), StaffCountry VARCHAR(30), StaffAirCode VARCHAR(15), StaffAddressComplement VARCHAR(15), StaffIban VARCHAR(30), StaffID VARCHAR(30) UNIQUE);
+
+CREATE table if not exists classes(ClassID INT auto_increment PRIMARY KEY, ClassName VARCHAR(50), ClassCapacity INT);
+
